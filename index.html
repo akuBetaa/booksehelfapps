@@ -19,55 +19,62 @@
         </div>
       </nav>
 
-      <div class="mx-5">
+      <div class="mx-5 my-4">
         <div class="row">
-          <div class="col-4">
-            fd
+          <div class="col-4 mt-4">
+            <h3>
+                Tambahkan Buku Bacaan
+            </h3>
           </div>
           <div class="col-8">
-            <h5 class="text-center">Rak Buku</h5>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Cari Buku</span>
-                <input type="search" class="form-control" placeholder="ketikkan judul buku" name="searchTitle" id="searchTitle">
-                <button type="submit" class="btn search-btn btn-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                      </svg>
-                </button>
+            <h5 class="text-center">Cari Buku Bacaan</h5>
+            <div class="input-group mb-3">                
+                <form id="cariBuku" class="d-flex w-100">
+                    <input type="search" class="form-control" placeholder="ketikkan judul buku" name="cariJudulBuku" id="cariJudulBuku">
+                    <button type="submit" class="btn search-btn btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                          </svg>
+                    </button>
+                </form>
               </div>
           </div>
         </div>
 
         <div class="row">
-            <div class="col-4">
-                <form id="addBookForm">
-                    <div class="title mb-3">
-                        <label for="title" class="form-label">Judul Buku</label>
-                        <input type="text" name="title" id="title" class="form-control" />
+            <div class="formBuku col-4">
+                <form id="tambahBuku">
+                    <div class="input mb-3">
+                        <label for="tambahJudul" class="form-label">Judul Buku</label>
+                        <input type="text" name="title" id="tambahJudul" class="form-control" />
                     </div>
-                    <div class="author mb-3">
-                        <label for="author" class="form-label">Penulis Buku </label>
-                        <input type="text" name="author" id="author" class="form-control" />
+                    <div class="input mb-3">
+                        <label for="tambahPenulis" class="form-label">Penulis Buku </label>
+                        <input type="text" name="author" id="tambahPenulis" class="form-control" />
                     </div>
-                    <div class="published mb-3">
-                        <label for="published" class="form-label">Tahun Publikasi</label>
-                        <input type="number" name="published" id="published" class="form-control" />
+                    <div class="input mb-3">
+                        <label for="tambahTahunPublis" class="form-label">Tahun Publikasi</label>
+                        <input type="number" name="published" id="tambahTahunPublis" class="form-control" />
                     </div>
+                    <div class="input_inline">
+                        <label for="tambahBukuSelesai">Selesai dibaca</label>
+                        <input id="tambahBukuSelesai" type="checkbox">
+                      </div>
                     <div class="action d-flex align-items-center float-end mt-4">
-                        <button type="submit" class="btn add-btn">Tambah Buku</button>
+                        <button type="submit" class="btn add-btn btn-warning" id="submitBuku">Tambah Buku</button>
                     </div>
                 </form>
             </div>
 
-            <div class="col-4">
-                <h5>Buku Belum Siap</h5>
-                <div id="collapseUnfinishedList" class="unfinished-list accordion-collapse collapse show"></div>
+            <div class="rakBuku col-4 mt-3">
+                <h5>Belum Selesai di Baca</h5>
+                <div id="listBukuBelumSelesai" class="list_buku mt-3"></div>
             </div>
 
 
-            <div class="col-4">
-                <h5>Buku Sudah Siap</h5>
-                <div id="collapseFinishedList" class="finished-list accordion-collapse collapse show"></div>
+            <div class="rakBuku col-4 mt-3">
+                <h5>Sudah Selesai di Baca</h5>
+                <div id="listBukuSudahSelesai" class="list_buku mt-3"></div>
             </div>
         </div>
       </div>
@@ -75,7 +82,11 @@
     <footer class="pt-2" style="background-color: orange; height: 50px;">
         <p class="text-center">© created by Beta Nurul Awwalin</p>
     </footer>
-    <script src="assets/json/index.js"></script>
+
+
+    <script src="assets/script/data.js"></script>
+    <script src="assets/script/dom.js"></script>
+    <script src="assets/script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

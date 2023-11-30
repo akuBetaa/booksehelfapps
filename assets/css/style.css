@@ -1,0 +1,18 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rakBuku article {
+    border: 1px solid rgb(206, 206, 206);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px
+}
+
+.rakBuku article button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    /* font-size: 12px; */
+}
